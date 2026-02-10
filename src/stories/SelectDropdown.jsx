@@ -143,30 +143,17 @@ export default function SelectDropdownField({
             onChange={(e) => handleChange(e)}
           />
         )}
-        <div className="absolute inset-y-0 right-0 flex items-center">
-          <span style={{ marginLeft: 1180, marginBottom: "100%" }}> | </span>
-          <img
-            className={open() ? "rotate-180" : ""}
-            style={{
-              right: 0,
-            }}
-            src={arrowDown}
-            alt="arrowDown"
-          />
-        </div>
       </div>
+      <div className="clearfix"></div>
 
-      {/* <div className="absolute inset-y-0 right-3-5 flex items-center">
+      <div className="select-arrow-dropdown">
         |
         <img
-          className={open() ? "rotate-180" : ""}
-          style={{
-            marginLeft: 8,
-          }}
+          className={`w-4 h-4 transition-transform duration-200 ${open() ? "rotate-180" : ""}`}
           src={arrowDown}
           alt="arrowDown"
         />
-      </div> */}
+      </div>
 
       {isTagInputInvalid && (
         <p className="text-red-500 text-xs">Required Field</p>
